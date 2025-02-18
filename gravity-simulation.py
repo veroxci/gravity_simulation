@@ -35,7 +35,7 @@ class Simulation:
             Body(NVector(12_000_000,  0), 10000, NVector(500, -5600)), # Спутник 2 на орбите Земли
             Body(NVector(-10_000_000, -10_000_000), 1000, NVector(4000, -4000)), # Спутник 3 на орбите Земли
             Body(NVector(264_286_000, 264_286_000), 7.35e22, NVector(-730, 730)), # Луна
-            Body(NVector(260_286_000, 264_286_000), 10000, NVector(-2000, 730))
+            Body(NVector(260_286_000, 264_286_000), 10000, NVector(-1700, 1700))
         ]
         self.selected_body: Optional[Body] = None
         self.running = True
