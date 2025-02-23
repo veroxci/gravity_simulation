@@ -760,8 +760,7 @@ class Simulation:
                 if self.velocity_start_pos and keys[pygame.K_LSHIFT]:
                     # Задание скорости
                     sim_pos = (mouse_pos / self.scale) - self.camera_offset
-                    new_velocity = sim_pos - self.velocity_start_pos
-                    #new_velocity = new_velocity * math.log(new_velocity.length())
+                    new_velocity = (sim_pos - self.velocity_start_pos) * self.scale * 100
                     if self.selected_body.set_velocity(new_velocity):
                         self.update_selected_body_inputs()
                         self.save_state()

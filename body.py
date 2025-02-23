@@ -145,7 +145,7 @@ class Body:
             pygame.draw.aalines(screen, (100, 100, 100), False, points, 1)
         
         # Отрисовка тела
-        scaled_radius = max(2, int(self.radius * scale))
+        scaled_radius = min(max(2, int(self.radius * scale)), 5*max(screen.get_width(), screen.get_height()))
         if (0 <= screen_x <= screen.get_width() and 
             0 <= screen_y <= screen.get_height()):
             # Основной круг
